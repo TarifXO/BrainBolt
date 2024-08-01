@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">BrainBolt</string>
+    <string name="brainbolt">BrainBolt</string>
+    <string name="starting">Start with your desirable exercise from the following list of exercise now!</string>
+    <string name="exercises">All Exercises</string>
+    <string name="finish">Finish</string>
+</resources>

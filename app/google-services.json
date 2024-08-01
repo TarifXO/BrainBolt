@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "625246972663",
+    "project_id": "brainbolt-31e56",
+    "storage_bucket": "brainbolt-31e56.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:625246972663:android:99a28f78ca081c024581f2",
+        "android_client_info": {
+          "package_name": "com.example.brainbolt"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAu8jy_uo5o1TIB3dAByFwToUi8WLvGPic"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
