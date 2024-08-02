@@ -8,9 +8,9 @@ import com.example.brainbolt.databinding.ActivityMainBinding
 import com.google.firebase.database.FirebaseDatabase
 
 class MainActivity : AppCompatActivity() {
-    lateinit var binding: ActivityMainBinding
-    lateinit var quizModelList : MutableList<QuizModel>
-    lateinit var adapter: QuizListAdapter
+    private lateinit var binding: ActivityMainBinding
+    private lateinit var quizModelList : MutableList<QuizModel>
+    private lateinit var adapter: QuizListAdapter
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)

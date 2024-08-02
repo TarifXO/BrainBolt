@@ -11,6 +11,7 @@ import android.widget.Toast
 import androidx.appcompat.app.AlertDialog
 import com.example.brainbolt.databinding.ActivityQuizBinding
 import com.example.brainbolt.databinding.ScoreDialogBinding
+import kotlin.text.*
 
 class QuizActivity : AppCompatActivity(), View.OnClickListener {
 
@@ -22,9 +23,9 @@ class QuizActivity : AppCompatActivity(), View.OnClickListener {
     lateinit var binding: ActivityQuizBinding
     private lateinit var alertDialog: AlertDialog
 
-    var currentQuestionIndex = 0
-    var selectedAnswer = ""
-    var score = 0
+    private var currentQuestionIndex = 0
+    private var selectedAnswer = ""
+    private var score = 0
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -38,7 +39,7 @@ class QuizActivity : AppCompatActivity(), View.OnClickListener {
             nextBtn.setOnClickListener(this@QuizActivity)
         }
 
-        questionModelList = intent.getParcelableArrayListExtra("questionList") ?: listOf()
+        questionModelList = intent.getSerializableExtra("questionList") as? List<QuestionModel> ?: listOf()
         time = intent.getStringExtra("time") ?: "0"
         loadQuestions()
         startTimer()
@@ -81,10 +82,10 @@ class QuizActivity : AppCompatActivity(), View.OnClickListener {
 
     override fun onClick(view: View?) {
         binding.apply {
-            btn0.setBackgroundColor(getColor(R.color.gray))
-            btn1.setBackgroundColor(getColor(R.color.gray))
-            btn2.setBackgroundColor(getColor(R.color.gray))
-            btn3.setBackgroundColor(getColor(R.color.gray))
+            btn0.setBackgroundResource(R.drawable.rounded_button_corner)
+            btn1.setBackgroundResource(R.drawable.rounded_button_corner)
+            btn2.setBackgroundResource(R.drawable.rounded_button_corner)
+            btn3.setBackgroundResource(R.drawable.rounded_button_corner)
         }
 
         val clickedBtn = view as Button
@@ -103,7 +104,7 @@ class QuizActivity : AppCompatActivity(), View.OnClickListener {
         } else {
             // options button is clicked
             selectedAnswer = clickedBtn.text.toString()
-            clickedBtn.setBackgroundColor(getColor(R.color.orange))
+            clickedBtn.setBackgroundResource(R.drawable.rounded_button_selected_corner)
         }
     }
 
